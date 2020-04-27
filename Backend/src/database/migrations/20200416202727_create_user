@@ -1,0 +1,21 @@
+exports.up = function(knex) {
+  return knex.schema.createTable('users', function(table) {
+    table.increments();
+    table.string('nome').notNullable();
+    table.string('matricula').unique().notNullable();
+    table.string('email').unique().notNullable();
+    table.string('password_hash').notNullable();
+    table.string('senhaTemp').notNullable();
+    table.string('userType').notNullable();
+    table.boolean('loggedin').notNullable();
+    table.boolean('isVerified').notNullable();
+    table.boolean('isVerifiedAdmin').notNullable();
+    table.boolean('refusedByAdmin').notNullable();
+    table.timestamp('created_at', { precision: 6 }).defaultTo(knex.fn.now(6));
+    table.timestamp('updated_at', { precision: 6 }).defaultTo(knex.fn.now(6));
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('users');
+};
