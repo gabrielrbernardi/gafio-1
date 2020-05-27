@@ -5,7 +5,7 @@ import unicodedata
 apiDoencaUrl = "https://cid10-api.herokuapp.com/cid10"
 outFile = "doencas.txt"
 
-print("Do you want to overwrite this file ({})? (S/N) ".format(outFile), end="")
+print("Do you want to overwrite this file ({})? (Y/N) ".format(outFile), end="")
 opcao = str(input())
 
 # oppening config file
