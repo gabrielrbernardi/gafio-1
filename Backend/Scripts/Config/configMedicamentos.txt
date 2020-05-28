@@ -1,0 +1,3 @@
+tableName:Medicamentos
+outFile:./DatabaseSeeds/medicamentos.txt
+columnNames:PrincipioAtivo, CNPJ, Laboratorio, Registro, EAN, Produto, Apresentacao, ClasseTerapeutica, PMC 0%, PMC 12%, PMC 17%, PMC 17% ALC, PMC 17,5%", PMC 17,5% ALC, PMC 18%, PMC 18%, PMC 20%
